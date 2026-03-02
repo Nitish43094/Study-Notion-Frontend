@@ -209,7 +209,7 @@ const VideoDetails = () => {
                 }}
                 className="px-4 py-2 bg-blue-500 rounded-md hover:bg-blue-400"
               >
-                Rewatch
+                Re-watch
               </button>
             </div>
 
