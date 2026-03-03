@@ -26,7 +26,7 @@ const {
     CREATE_RATING_API,
 } = courseEndpoints;
 // *********************************Course**********************************************
-export const addCourseDetails = async (formData, token) => {
+export const addCourseDetails = async (formData) => {
     let result = null;
     const toastId = toast.loading("Loading....")
     try {
@@ -49,9 +49,10 @@ export const addCourseDetails = async (formData, token) => {
     return result
 }
 
-export const getCourseDetails = async (courseId) => {
+export const getCourseDetails = async (courseId,token) => {
     let result = null;
     const toastId = toast.loading("Loading...")
+    console.log("Here is course id->",courseId)
     try {
         const response = await apiConnector("POST", COURSE_DETAILS_API, { courseId })
         console.log("COURSE_DETAILS_API API RESPONSE............", response.data)

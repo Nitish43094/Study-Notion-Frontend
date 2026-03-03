@@ -45,11 +45,19 @@ const CourseDetails = () => {
       return;
     }
   }
-  console.log("In Course details -< ",course)
+  // console.log("In Course details -< ",course)
   if (loading || !course) {
     return (
       <div className="text-white flex justify-center items-center h-screen">
         Loading...
+      </div>
+    );
+  }
+
+  if (loading || !user) {
+    return (
+      <div className="text-white flex justify-center items-center h-screen">
+        User Not Log-in
       </div>
     );
   }
